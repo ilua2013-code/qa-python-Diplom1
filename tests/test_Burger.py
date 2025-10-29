@@ -72,6 +72,6 @@ class TestBurger:
         mokk_ing.get_price.return_value = 100
         burger.bun = mokk_bun
         burger.ingredients = [mokk_ing]
-        assert DataBurger.expected_receipt == burger.get_receipt()
+        assert DataBurger.expected_receipt == burger.get_receipt() 
 
     
