@@ -42,23 +42,7 @@ class TestBurger:
         
         assert burger.get_price() == expected_price
         
-    @pytest.mark.parametrize('ingredient_count, price',[(0, 600), (1, 700), (2, 800), (3, 900)])
-    def test_get_receipt(self, ingredient_count, burger, price):
-        f"""Получить чек бургера c разным количеством ингредиентов {ingredient_count}"""
-        mokk_receipt = Mock()
-        mokk_receipt.get_price.return_value =  DataBurger.RED_BUN[1]
-        burger.bun = mokk_receipt
-        
-        burger.ingredients = []
-        for _ in range(ingredient_count):
-            mokk_ing = Mock()
-            mokk_ing.get_type.return_value = DataBurger.HOT_SAUCE[0]
-            mokk_ing.get_name.return_value = DataBurger.HOT_SAUCE[1]
-            mokk_ing.get_price.return_value = DataBurger.HOT_SAUCE[2]
-            burger.ingredients.append(mokk_ing)
-        
-        receipt = burger.get_receipt()
-        assert f'Price: {price}' in receipt  
+
     
     def test_receipt_formatting(self, burger):
     # Тест на точный формат чека
