@@ -4,7 +4,6 @@ __pycache__/
 *.so
 .pytest_cache/
 .coverage
-htmlcov/
 
 # Virtual environments
 venv/
@@ -29,7 +28,6 @@ __pycache__/
 *.so
 .pytest_cache/
 .coverage
-htmlcov/
 
 # Virtual environments
 venv/

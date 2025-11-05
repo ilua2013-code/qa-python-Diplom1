@@ -1,6 +1,8 @@
 from data import DataBurger
 import pytest
 from unittest.mock import Mock
+
+
 class TestBurger:
 
     """Добавление булочки к бургеру"""
